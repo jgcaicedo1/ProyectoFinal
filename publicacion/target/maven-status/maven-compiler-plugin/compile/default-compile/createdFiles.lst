@@ -1,0 +1,8 @@
+com\serviciopublicacion\servicio_publicacion\dominio\repository\PublicacionRepository.class
+com\serviciopublicacion\servicio_publicacion\aplicacion\dto\PublicacionDTO.class
+com\serviciopublicacion\servicio_publicacion\dominio\model\Publicacion.class
+com\serviciopublicacion\servicio_publicacion\infraestructura\config\AppConfig.class
+com\serviciopublicacion\servicio_publicacion\presentacion\graphql\PublicacionGraphQL.class
+com\serviciopublicacion\servicio_publicacion\aplicacion\service\PublicacionService.class
+com\serviciopublicacion\servicio_publicacion\infraestructura\config\WebConfig.class
+com\serviciopublicacion\servicio_publicacion\ServicioPublicacionApplication.class

@@ -1,0 +1,15 @@
+type Seleccion {
+    id: ID
+    candidatoId: ID
+    evaluacionFinal: String
+    comentario: String
+    fechaSeleccion: String
+}
+
+type Query {
+    obtenerSeleccionados: [Seleccion]
+}
+
+type Mutation {
+    registrarSeleccion(candidatoId: ID!, evaluacionFinal: String!, comentario: String!): Seleccion
+}

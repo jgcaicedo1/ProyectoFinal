@@ -1,0 +1,68 @@
+# Tipos de datos
+type Requisicion {
+    id: ID!
+    cargo: String!
+    funciones: String!
+    categoriaSalarial: String!
+    perfil: String!
+    estado: String!
+    fechaInicio: String!
+    fechaFin: String
+    candidatoSeleccionado: Candidato # Relación con candidato seleccionado
+    idAreaSolicitante: ID!
+    comentarios: String
+}
+
+type Candidato {
+    id: ID!
+    nombre: String!
+    email: String
+    curriculum_url: String
+    telefono: String
+    requisicionAsociada: Requisicion # Relación opcional con la requisición
+}
+
+# Input para crear/actualizar Requisicion
+input RequisicionInput {
+    cargo: String!
+    funciones: String!
+    categoriaSalarial: String!
+    perfil: String!
+    estado: String
+    fechaInicio: String
+    fechaFin: String
+    idUsuarioSeleccionado: ID    # Opcional
+    idAreaSolicitante: ID    # Obligatorio
+    comentarios: String
+}
+
+# Input para actualizar estado
+input RequisicionEstadoInput {
+    id: ID!
+    estado: String!
+}
+
+# Input para asignar candidato
+input AsignarCandidatoInput {
+    id: ID
+    idUsuarioSeleccionado: ID
+}
+
+# Queries
+type Query {
+    obtenerTodasRequisiciones: [Requisicion]!
+    requisiciones(usuario: String!): [Requisicion]!  # Lista todas las requisiciones del usuario
+    obtenerRequisicionPorId(id: ID!): Requisicion    # Nueva query para buscar por ID
+    obtenerCandidatos: [Candidato!]!            
+    candidato(id: ID!): Candidato
+    obtenerIdAreaPorUsuario(usuario: String): ID
+}
+
+# Mutaciones
+type Mutation {
+    crearRequisicion(input: RequisicionInput!): Requisicion!
+    actualizarEstadoRequisicion(id: ID!, estado: String!, fechaFin: String): Requisicion!
+    actualizarRequisicion(id: ID!, input: RequisicionInput!): Requisicion!
+    asignarUsuarioSeleccionado(input: AsignarCandidatoInput!): Requisicion!
+    eliminarRequisicionLogico(id: ID!): Requisicion!  # Eliminar lógico
+}

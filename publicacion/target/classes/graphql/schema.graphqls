@@ -1,0 +1,16 @@
+type Publicacion {
+    id: ID
+    requisicionId: ID
+    plataforma: String
+    fechaPublicacion: String
+    estado: String
+}
+
+type Query {
+    obtenerPublicaciones: [Publicacion]
+}
+
+type Mutation {
+    crearPublicacion(requisicionId: ID!, plataforma: String!, fechaPublicacion: String!): Publicacion
+    actualizarPublicacion(id: ID!, estado: String): Publicacion
+}
