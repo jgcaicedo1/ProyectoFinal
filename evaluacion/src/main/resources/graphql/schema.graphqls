@@ -1,0 +1,16 @@
+type Evaluacion {
+    id: ID
+    candidatoId: ID
+    tipoEvaluacion: String
+    puntaje: Float
+    estado: String
+    fechaEvaluacion: String
+}
+
+type Query {
+    obtenerEvaluaciones: [Evaluacion]
+}
+
+type Mutation {
+    registrarEvaluacion(candidatoId: ID!, tipoEvaluacion: String!, puntaje: Float!): Evaluacion
+}

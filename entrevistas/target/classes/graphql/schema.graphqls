@@ -1,0 +1,16 @@
+type Entrevista {
+    id: ID
+    candidatoId: ID
+    entrevistador: String
+    fechaHora: String
+    estado: String
+    observaciones: String
+}
+
+type Query {
+    obtenerEntrevistas: [Entrevista]
+}
+
+type Mutation {
+    programarEntrevista(candidatoId: ID!, entrevistador: String!, fechaHora: String!, observaciones: String!): Entrevista
+}
