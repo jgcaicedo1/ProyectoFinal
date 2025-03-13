@@ -1,0 +1,19 @@
+type Candidato {
+    id: ID
+    vacanteId: ID
+    nombre: String
+    email: String
+    telefono: String
+    curriculumUrl: String
+    estado: String
+    fechaPostulacion: String
+}
+
+type Query {
+    obtenerCandidatos: [Candidato]
+}
+
+type Mutation {
+    registrarCandidato(vacanteId: ID!, nombre: String!, email: String!, telefono: String!, curriculumUrl: String!): Candidato
+    actualizarEstadoCandidato(id: ID!, estado: String!): Candidato
+}

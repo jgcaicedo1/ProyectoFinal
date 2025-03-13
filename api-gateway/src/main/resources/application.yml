@@ -1,0 +1,70 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: 
+              - "http://localhost:5173"  
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*" 
+            allowCredentials: true
+      routes:
+        - id: servicio-requisicion
+          uri: http://localhost:8000
+          predicates:
+            - Path=/requisicion
+          filters:
+            - RemoveRequestHeader=Origin 
+
+        - id: servicio-publicacion
+          uri: http://localhost:8001
+          predicates:
+            - Path=/publicacion
+          filters:
+            - RemoveRequestHeader=Origin 
+        - id: servicio-candidatos
+          uri: http://localhost:8002
+          predicates:
+            - Path=/candidatos
+          filters:
+            - RemoveRequestHeader=Origin 
+
+        - id: servicio-evaluacion
+          uri: http://localhost:8003
+          predicates:
+            - Path=/evaluacion
+          filters:
+            - RemoveRequestHeader=Origin  
+
+        - id: servicio-entrevistas
+          uri: http://localhost:8004
+          predicates:
+            - Path=/entrevistas
+          filters:
+            - RemoveRequestHeader=Origin  
+
+        - id: servicio-seleccion
+          uri: http://localhost:8005
+          predicates:
+            - Path=/seleccion
+          filters:
+            - RemoveRequestHeader=Origin  
+
+  application:
+    name: api-gateway
+
+  graphql:
+    path: /graphql
+    graphiql:
+      enabled: true
+

@@ -1,0 +1,58 @@
+type Query {
+    obtenerTodasRequisiciones: [Requisicion]
+    obtenerRequisiciones(usuario: String): [Requisicion]
+    obtenerRequisicionPorId(id: ID!): Requisicion
+    obtenerPublicaciones: [Publicacion]
+    obtenerCandidatos: [Candidato]
+    obtenerEvaluaciones: [Evaluacion]
+    obtenerEntrevistas: [Entrevista]
+    obtenerSeleccionados: [Seleccion]
+}
+
+type Requisicion {
+    id: ID!
+    cargo: String!
+    funciones: String!
+    categoriaSalarial: String!
+    perfil: String!
+    estado: String!
+    fechaInicio: String!
+    fechaFin: String
+    candidatoSeleccionado: Candidato
+    idAreaSolicitante: ID!
+    comentarios: String
+}
+
+type Publicacion {
+    id: ID!
+    requisicionId: ID!
+    plataforma: String!
+    fechaPublicacion: String!
+}
+
+type Candidato {
+    id: ID!
+    nombre: String!
+    apellido: String!
+    email: String!
+    estado: String!
+}
+
+input RequisicionInput {
+    cargo: String!
+    funciones: String!
+    categoriaSalarial: String!
+    perfil: String!
+    fechaInicio: String          # Opcional
+    fechaFin: String             # Opcional
+    idUsuarioSeleccionado: ID    # Opcional
+    idAreaSolicitante: ID!       # Obligatorio
+}
+
+type Mutation {
+    crearRequisicion(input: RequisicionInput!): Requisicion
+    actualizarEstadoRequisicion(id: ID!, estado: String!,fechaFin: String): Requisicion
+    actualizarRequisicion(id: ID!, input: RequisicionInput): Requisicion
+    asignarUsuarioSeleccionado(id: ID!, idUsuarioSeleccionado: ID!): Requisicion
+    actualizarPublicacion(id: ID!, estado: String): Publicacion
+}

@@ -1,0 +1,13 @@
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\aplicacion\dto\CandidatoDTO.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\aplicacion\event\Event.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\aplicacion\service\CandidatoListener.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\aplicacion\service\CandidatoService.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\config\WebConfig.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\dominio\model\Candidato.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\dominio\repository\CandidatoRepository.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\infraestructura\config\Config.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\infraestructura\messaging\KafkaConfig.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\infraestructura\persistence\Persistence.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\presentacion\graphql\CandidatoGraphQL.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\presentacion\rest\RestController.java
+C:\Users\Gabriel\Downloads\Trabajo\Trabajo\back\candidatos\src\main\java\com\serviciocandidatos\servicio_candidatos\ServicioCandidatosApplication.java
